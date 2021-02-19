@@ -24,12 +24,10 @@ public class activator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKeyDown(key))
         {
             StartCoroutine(Pressed());
         }
-
 
         if (Input.GetKeyDown(key) && active)
         {
@@ -41,11 +39,8 @@ public class activator : MonoBehaviour
     {
         active = true;
         if (col.gameObject.tag == "Note")
-        {
             //Destroy(col.gameObject);
             note = col.gameObject;
-        }
-            
     }
 
     void ONTriggerExit2D(Collider2D col)
@@ -55,7 +50,7 @@ public class activator : MonoBehaviour
 
     IEnumerator Pressed()
     {
-        sr.color = new Color(0, 0, 0);
+        sr.color = new Color(10, 10, 10);
         yield return new WaitForSeconds(0.1f);
         sr.color = old;
     }
