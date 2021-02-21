@@ -11,15 +11,13 @@ public class Spawner : MonoBehaviour
 
     private float nextTimeToSpawn = 0f;
 
-
-
-
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextTimeToSpawn)
+        var values = new[] {-3, 0, 3 };
+        if (Time.time >= nextTimeToSpawn)
         {
-            Instantiate(notesPrefab, Vector3.up * 5, Quaternion.identity);
+            Instantiate(notesPrefab, new Vector3(values[Random.Range(0,3)], 5, 0), Quaternion.identity);
             nextTimeToSpawn = Time.time + 1f / spawnRate;
         }
     }
