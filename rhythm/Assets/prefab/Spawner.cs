@@ -21,4 +21,10 @@ public class Spawner : MonoBehaviour
             nextTimeToSpawn = Time.time + 1f / spawnRate;
         }
     }
+
+    public void AdjustSpawnRate(float newRate)
+    {
+        spawnRate = newRate;
+    }
+
 }
