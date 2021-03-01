@@ -22,9 +22,9 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void AdjustSpawnRate(float newRate)
+    public void AdjustSpeed(float newspeed)
     {
-        spawnRate = newRate;
+        Time.timeScale = newspeed;
     }
 
 }

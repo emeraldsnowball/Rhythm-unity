@@ -29,4 +29,11 @@ public class Note : MonoBehaviour
                 Destroy(gameObject);
         }
     }
+
+    /*
+    public void AdjustSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
+    */
 }

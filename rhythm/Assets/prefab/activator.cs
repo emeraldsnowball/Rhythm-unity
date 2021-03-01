@@ -43,7 +43,7 @@ public class activator : MonoBehaviour
             note = col.gameObject;
     }
 
-    void ONTriggerExit2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
         active = false;
     }
